@@ -29,8 +29,8 @@ class Order_model extends CI_Model {
         $this->db->where('pemesan_id', $pemesan_id);
         $this->db->join('customer', 'customer.customer_id = order.pemesan_id');
         $this->db->join('paket', 'paket.paket_id = order.paket_id');
-        $this->db->join('jobs', 'jobs.order_id = order.order_id');
-        $this->db->join('konten', 'konten.job_id = jobs.job_id');
+        // $this->db->join('jobs', 'jobs.order_id = order.order_id');
+        // $this->db->join('konten', 'konten.job_id = jobs.job_id');
         
         // Diurutkan berdasarkan tanggal
         $this->db->order_by('order_date', 'desc'); 

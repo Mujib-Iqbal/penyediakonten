@@ -44,9 +44,6 @@
               <td><?=ucwords($value->order_status) ?></td>
               <td>
                 <a class="btn btn-success btn-flat"  href="<?=base_url('customer/order/detail/'.$value->order_id) ?>"><i class="fa fa-eye"></i></a>
-                <?php if($value->order_status=='selesai'): ?>
-                <a class="btn btn-info btn-flat"  href="<?=base_url('uploads/'.$value->konten_file) ?>"><i class="fa fa-download"></i></a>
-                <?php endif; ?>
               </td>
             </tr>
           <?php endforeach; ?>
