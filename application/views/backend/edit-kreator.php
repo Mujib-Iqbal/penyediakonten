@@ -55,7 +55,7 @@
                 <?php echo form_error('alamat'); ?>
                 <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="<?php echo set_value('alamat', $kreator->kreator_alamat); ?>">
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Password</label>
                 <?php echo form_error('password'); ?>
                 <input type="password" class="form-control" name="password" placeholder="Password" value="<?php echo set_value('password', $kreator->kreator_password); ?>">
@@ -64,7 +64,7 @@
                 <label>Konfirmasi Password</label>
                 <?php echo form_error('confirmpassword'); ?>
                 <input type="password" class="form-control" name="confirmpassword" placeholder="Konfirmasi Password" value="<?php echo set_value('password', $kreator->kreator_password); ?>">
-              </div>
+              </div> -->
             </div><!-- /.box-body -->
             <div class="box-footer">
               <button type="submit" class="btn btn-success btn-flat">Simpan</button>

@@ -30,6 +30,7 @@
               <th>Jumlah</th>
               <th>Total</th>
               <th>Status</th>
+              <th>Progres</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -42,6 +43,7 @@
               <td><?=$value->order_jumlah ?></td>
               <td><?=rupiah($value->order_total) ?></td>
               <td><?=ucwords($value->order_status) ?></td>
+              <td><?=(is_null($value->job_progress)) ? '-' : $value->job_progress ?></td>
               <td>
                 <a class="btn btn-success btn-flat"  href="<?=base_url('customer/order/detail/'.$value->order_id) ?>"><i class="fa fa-eye"></i></a>
               </td>

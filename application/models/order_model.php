@@ -26,16 +26,19 @@ class Order_model extends CI_Model {
     }
 
     function viewByCustomer($pemesan_id) {
+        $this->db->select('order.order_id, order.order_date as order_date, paket.paket_nama, order.order_jumlah, order.order_total, order.order_status, jobs.job_progress');
+        $this->db->from('order');
         $this->db->where('pemesan_id', $pemesan_id);
         $this->db->join('customer', 'customer.customer_id = order.pemesan_id');
         $this->db->join('paket', 'paket.paket_id = order.paket_id');
-        // $this->db->join('jobs', 'jobs.order_id = order.order_id');
+        $this->db->join('jobs', 'jobs.order_id = order.order_id', 'left');
+        $this->db->distinct();
         // $this->db->join('konten', 'konten.job_id = jobs.job_id');
         
         // Diurutkan berdasarkan tanggal
         $this->db->order_by('order_date', 'desc'); 
         
-        return $this->db->get('order')->result();
+        return $this->db->get()->result();
     }
 
     function get($id, $customer_id = null) {
