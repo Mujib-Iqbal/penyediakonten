@@ -5,7 +5,20 @@ if (!defined('BASEPATH'))
 
 class Konten_model extends CI_Model {
 
-	function add($data) {
+	function totalByKreator($id) {
+        $this->db->join('jobs', 'jobs.job_id=konten.job_id');
+        $this->db->where('kreator_id', $id);
+        return $this->db->count_all_results('konten');
+    }
+
+    function totalByCustomer($id) {
+        $this->db->join('jobs', 'jobs.job_id=konten.job_id');
+        $this->db->join('order', 'jobs.order_id=order.order_id');
+        $this->db->where('pemesan_id', $id);
+        return $this->db->count_all_results('konten');
+    }
+
+    function add($data) {
         return $this->db->insert('konten', $data);
     }
 

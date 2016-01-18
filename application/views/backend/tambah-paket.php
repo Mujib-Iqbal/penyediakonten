@@ -11,7 +11,7 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-solid box-info">
           <div class="box-header">
             <h3 class="box-title">Tambah Paket</h3>
           </div><!-- /.box-header -->
@@ -57,7 +57,7 @@
               </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-              <button type="submit" class="btn btn-success btn-flat">Submit</button>
+              <button type="submit" class="btn btn-success btn-flat">Tambahkan</button>
             </div>
           </form>
         </div>

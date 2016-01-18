@@ -5,6 +5,10 @@ if (!defined('BASEPATH'))
 
 class Kreator_model extends CI_Model {
 
+	function total() {
+        return $this->db->count_all('kreator');
+    }
+
 	function add($data) {
         return $this->db->insert('kreator', $data);
     }

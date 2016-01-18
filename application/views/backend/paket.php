@@ -17,7 +17,7 @@
       <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
       <?php endif; ?>
-      <div class="box box-success">
+      <div class="box box-info">
         <div class="box-header">
           <h3 class="box-title">Lihat Paket</h3>
         </div><!-- /.box-header -->

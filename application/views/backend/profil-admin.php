@@ -11,9 +11,9 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-solid box-primary">
+        <div class="box box-solid box-info">
           <div class="box-header">
-            <h3 class="box-title">Edit Admin</h3>
+            <h3 class="box-title">Profil</h3>
           </div><!-- /.box-header -->
           <!-- form start -->
           <form method="POST" action="<?php echo base_url('dashboard/admin/profil/'.$this->session->userdata('admin_id')) ?>" role="form">

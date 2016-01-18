@@ -30,7 +30,7 @@
               <th>Jumlah</th>
               <th>Total</th>
               <th>Status</th>
-              <th>Progres</th>
+              <th>Progress</th>
               <th>Action</th>
             </tr>
           </thead>

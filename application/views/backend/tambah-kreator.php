@@ -11,7 +11,7 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-solid box-primary">
+        <div class="box box-solid box-info">
           <div class="box-header">
             <h3 class="box-title">Tambah Kreator</h3>
           </div><!-- /.box-header -->
@@ -67,7 +67,7 @@
               </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-success">Tambahkan</button>
             </div>
           </form>
         </div>

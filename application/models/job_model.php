@@ -5,6 +5,11 @@ if (!defined('BASEPATH'))
 
 class Job_model extends CI_Model {
 
+    function totalByKreator($id) {
+        $this->db->where('kreator_id', $id);
+        return $this->db->count_all_results('jobs');
+    }
+
     function add($data) {
         return $this->db->insert('jobs', $data);
     }

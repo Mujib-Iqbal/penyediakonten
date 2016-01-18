@@ -5,6 +5,10 @@ if (!defined('BASEPATH'))
 
 class Customer_model extends CI_Model {
 
+    function total() {
+        return $this->db->count_all('customer');
+    }
+
     function add($data) {
         return $this->db->insert('customer', $data);
     }

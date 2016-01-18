@@ -1,63 +1,64 @@
 <section class="title">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span6">
-                    <h1>Pricing</h1>
-                </div>
-                <div class="span6">
-                    <ul class="breadcrumb pull-right">
-                        <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-                        <li><a href="#">Pages</a> <span class="divider">/</span></li>
-                        <li class="active">Pricing</li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <h1>Pricing</h1>
             </div>
-        </div>
-    </section>
-    <!-- / .title -->
-
-    <section id="pricing-table" class="container">
-        <div class="center">
-            <h2>Pellentesque habitant morbi tristique senectus et netus</h2>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-
-        <div class="big-gap"></div>
-        <h2 class="center">Pellentesque habitant morbi tristique senectus et netus</h2>
-
-        <div class="row-fluid center clearfix">
-            <div class="span3">
-                <ul class="plan plan1">
-                    <?php foreach ($paket as $value) : ?>
-                    <li class="plan-name">
-                        <h3><?=$value->paket_nama; ?></h3>
-                    </li>
-                    <li class="plan-price">
-                        <strong>$29</strong> / month
-                    </li>
-                    <li>
-                        <strong><?=$value->konten_jenis; ?></strong> Storage
-                    </li>
-                    <li>
-                        <strong><?=$value->paket_jangkawaktu; ?></strong> RAM
-                    </li>
-                    <li>
-                        <strong>400GB</strong> Bandwidth
-                    </li>
-                    <li>
-                        <strong><?=$value->paket_jumlah; ?></strong> Email Address
-                    </li>
-                    <li>
-                        <strong><?=$value->paket_harga; ?></strong> Support
-                    </li>
-                    <li class="plan-action">
-                        <a href="#" class="btn btn-transparent">Signup Now!</a>
-                    </li>
-                    <?php endforeach; ?>
+            <div class="span6">
+                <ul class="breadcrumb pull-right">
+                    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+                    <li><a href="#">Pages</a> <span class="divider">/</span></li>
+                    <li class="active">Pricing</li>
                 </ul>
             </div>
+        </div>
+    </div>
+</section>
+<!-- / .title -->
 
-            <div class="span3">
+<section id="pricing-table" class="container">
+    <div class="center">
+        <h2>Pellentesque habitant morbi tristique senectus et netus</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </div>
+
+    <div class="big-gap"></div>
+    <h2 class="center">Pellentesque habitant morbi tristique senectus et netus</h2>
+
+    <div class="row-fluid center clearfix">
+        <?php foreach ($paket as $value) : ?>
+        <div class="span3">
+            <ul class="plan plan1">
+                <li class="plan-name">
+                    <h3><?=$value->paket_nama; ?></h3>
+                </li>
+                <li class="plan-price">
+                    <strong>$29</strong> / month
+                </li>
+                <li>
+                    <strong><?=$value->konten_jenis; ?></strong> Storage
+                </li>
+                <li>
+                    <strong><?=$value->paket_jangkawaktu; ?></strong> RAM
+                </li>
+                <li>
+                    <strong>400GB</strong> Bandwidth
+                </li>
+                <li>
+                    <strong><?=$value->paket_jumlah; ?></strong> Email Address
+                </li>
+                <li>
+                    <strong><?=$value->paket_harga; ?></strong> Support
+                </li>
+                <li class="plan-action">
+                    <a href="<?php echo base_url('customer/order/add');?>" class="btn btn-transparent">Buy Now!</a>
+                </li>
+            </ul>
+        </div>
+    <?php endforeach; ?>
+
+
+            <!-- <div class="span3">
                 <ul class="plan plan2">
                     <li class="plan-name">
                         <h3>Standard</h3>
@@ -142,7 +143,7 @@
                         <a href="#" class="btn btn-transparent">Signup Now!</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
         <p>&nbsp;</p>

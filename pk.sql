@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2016 at 11:36 AM
+-- Generation Time: Jan 18, 2016 at 01:31 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `gaji` (
   `kreator_id` int(11) NOT NULL,
   `job_id` int(11) NOT NULL,
   `gaji_jumlah` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gaji`
@@ -90,7 +90,9 @@ INSERT INTO `gaji` (`gaji_id`, `kreator_id`, `job_id`, `gaji_jumlah`) VALUES
 (2, 7, 12, 20000),
 (3, 4, 8, 150000),
 (4, 8, 13, 48000),
-(5, 7, 15, 80000);
+(5, 7, 15, 80000),
+(16, 7, 18, 170000),
+(17, 2, 19, 180000);
 
 -- --------------------------------------------------------
 
@@ -105,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `jobs` (
   `job_keuntungan` int(3) NOT NULL,
   `job_progress` int(3) NOT NULL,
   `job_status` varchar(30) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `jobs`
@@ -118,7 +120,8 @@ INSERT INTO `jobs` (`job_id`, `order_id`, `kreator_id`, `job_keuntungan`, `job_p
 (15, 16, 7, 80, 100, 'selesai'),
 (16, 17, 2, 90, 100, 'diterima'),
 (17, 18, 2, 75, 0, 'belum diverifikasi'),
-(18, 19, 7, 85, 100, 'diterima');
+(18, 19, 7, 85, 100, 'selesai'),
+(19, 21, 2, 60, 100, 'selesai');
 
 --
 -- Triggers `jobs`
@@ -129,7 +132,7 @@ CREATE TRIGGER `jobselesaidikerjakan` AFTER UPDATE ON `jobs`
 IF NEW.`job_status` = 'selesai' THEN
 UPDATE `order` SET `order`.`order_status` = 'selesai' WHERE `order`.`order_id` = NEW.`order_id`;
 INSERT INTO `gaji` VALUES(NULL, NEW.`kreator_id`, NEW.`job_id`, (SELECT `order_total` FROM `order` WHERE `order`.`order_id`=NEW.`order_id`)* (NEW.`job_keuntungan`/100));
-INSERT INTO `pendapatan` VALUES('',NEW.`job_id`, NOW(), (SELECT `order_total` FROM `order` WHERE `order`.`order_id`=NEW.`order_id`)-(SELECT `gaji_jumlah` FROM `gaji` WHERE `gaji`.`job_id`=NEW.`job_id`));
+INSERT INTO `pendapatan` VALUES(NULL, NEW.`job_id`, NOW(), (SELECT `order_total` FROM `order` WHERE `order`.`order_id`=NEW.`order_id`)-(SELECT `gaji_jumlah` FROM `gaji` WHERE `gaji`.`job_id`=NEW.`job_id`));
 END IF;
 END
 //
@@ -151,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `konten` (
   `konten_keterangan` text NOT NULL,
   `konten_komentar` text NOT NULL,
   `job_id` int(5) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `konten`
@@ -163,7 +166,8 @@ INSERT INTO `konten` (`konten_id`, `konten_nama`, `konten_jenis`, `konten_deskri
 (6, 'kalalala', '', '', '999.txt', 'diterima', 'bahaahahaha', 'aaaaaaaaaaaaaaaa', 13),
 (7, 'konten 15', '', '', '9992.txt', 'diterima', 'mohon dicek', 'ok', 15),
 (9, 'go', '', '', 'indigo.jpg', 'belum diverifikasi', 'iki', '', 16),
-(10, 'iki', '', '', '00000999.txt', 'belum diverifikasi', 'kulo', '', 18);
+(10, 'iki', '', '', '00000999.txt', 'diterima', 'kulo', 'aaaadadada', 18),
+(11, 'cek bro', '', '', '72734.txt', 'diterima', 'mohon dikoreksi', 'ikolpo', 19);
 
 --
 -- Triggers `konten`
@@ -200,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `kreator` (
 --
 
 INSERT INTO `kreator` (`kreator_id`, `kreator_nama`, `kreator_alamat`, `kreator_telefon`, `kreator_konten`, `kreator_email`, `kreator_username`, `kreator_password`) VALUES
-(1, 'm m iqbal killoo', 'Sewon Timbulharjo sewon Bantul', '0834576777', 'audio', 'iqbaluuuuu@gmail.com', 'iqbal', '1e03415333c2b6a791dbeb25d51350d5'),
+(1, 'm iqbal', 'Sewon Timbulharjo sewon Bantul', '0834576777', 'audio', 'iqbaluuuuu@gmail.com', 'iqbal', '1e03415333c2b6a791dbeb25d51350d5'),
 (2, 'kreator', 'Bantul Bantul Bantul yogyakarta', '088881818181', 'teks', 'kreator@gmail.com', 'kreator', '23f5e1973b5a048ffaaa0bd0183b5f87'),
 (3, 'apri', 'jogja', '08654678990', 'video', 'april@gmail.com', 'apri', '3c866e2b36c91e8a451d543043a8a5bf'),
 (4, 'Rangga', 'bandung', '09765327865', 'audio', 'rangga@gmail.com', 'rangga', '863c2a4b6bff5e22294081e376fc1f51'),
@@ -223,7 +227,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `order_keterangan` text NOT NULL,
   `order_status` varchar(50) NOT NULL,
   `order_terhapus` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `order`
@@ -235,7 +239,9 @@ INSERT INTO `order` (`order_id`, `pemesan_id`, `paket_id`, `order_date`, `order_
 (16, 1, 11, '2016-01-08 21:01:16', 1, 100000, 'lagu terbaru di 2016', 'selesai', 0),
 (17, 1, 6, '2016-01-10 22:10:46', 1, 300000, 'cek', 'pengerjaan', 0),
 (18, 1, 6, '2016-01-11 10:36:27', 3, 900000, 'qwqeafa avava', 'pengerjaan', 0),
-(19, 1, 11, '2016-01-12 09:26:19', 2, 200000, 'yuhuuuu', 'pengerjaan', 0);
+(19, 1, 11, '2016-01-12 09:26:19', 2, 200000, 'yuhuuuu', 'selesai', 0),
+(20, 1, 11, '2016-01-17 19:00:47', 4, 400000, 'coba lagi', 'proses pembayaran', 0),
+(21, 1, 6, '2016-01-17 21:03:06', 1, 300000, 'olalalaaaaaaaaaaa', 'selesai', 0);
 
 -- --------------------------------------------------------
 
@@ -252,7 +258,7 @@ CREATE TABLE IF NOT EXISTS `paket` (
   `paket_jumlah` varchar(20) NOT NULL,
   `paket_harga` int(11) NOT NULL,
   `paket_terhapus` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `paket`
@@ -265,7 +271,8 @@ INSERT INTO `paket` (`paket_id`, `paket_nama`, `konten_jenis`, `paket_deskripsi`
 (8, 'Paket 4', 'audio', 'Isi deskripsi paket 3', '2 minggu', '20', 354000, 0),
 (9, 'Paket 7', 'video', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', '1 minggu', '10', 300000, 1),
 (10, 'paket a', 'audio', 'aaaaaaaaaaaaaaaa', '3 minggu', '20', 100000, 1),
-(11, 'paket gold', 'gambar', '10konten', '3 minggu', '200', 100000, 0);
+(11, 'paket gold', 'gambar', '10konten', '3 minggu', '200', 100000, 0),
+(12, 'Paket Ultra', 'teks', 'deskripsi bababa kammaai akalalala ananana', '2 minggu', '15', 200000, 0);
 
 -- --------------------------------------------------------
 
@@ -280,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `payment_total` int(11) NOT NULL,
   `payment_keterangan` text NOT NULL,
   `payment_status` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payment`
@@ -292,7 +299,8 @@ INSERT INTO `payment` (`payment_id`, `order_id`, `payment_date`, `payment_total`
 (5, 16, '2016-01-08 21:01:44', 100000, 'bca', 'lunas'),
 (6, 17, '2016-01-10 22:11:06', 300000, 'ulalaaaaaaa', 'lunas'),
 (7, 18, '2016-01-11 10:38:10', 9000000, 'lalalalalaa', 'lunas'),
-(8, 19, '2016-01-12 09:29:49', 200000, 'ke bni', 'lunas');
+(8, 19, '2016-01-12 09:29:49', 200000, 'ke bni', 'lunas'),
+(9, 21, '2016-01-17 21:04:19', 300000, 'kakakaaa', 'lunas');
 
 --
 -- Triggers `payment`
@@ -318,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `pendapatan` (
   `job_id` int(11) NOT NULL,
   `pendapatan_tanggal` date NOT NULL,
   `pendapatan_jumlah` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pendapatan`
@@ -328,7 +336,9 @@ INSERT INTO `pendapatan` (`pendapatan_id`, `job_id`, `pendapatan_tanggal`, `pend
 (0, 15, '2016-01-08', 20000),
 (1, 12, '2015-12-28', 180000),
 (2, 8, '2015-12-28', 50000),
-(3, 13, '2015-12-28', 432000);
+(3, 13, '2015-12-28', 432000),
+(4, 18, '2016-01-17', 30000),
+(5, 19, '2016-01-17', 120000);
 
 --
 -- Indexes for dumped tables
@@ -412,17 +422,17 @@ MODIFY `customer_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `gaji`
 --
 ALTER TABLE `gaji`
-MODIFY `gaji_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `gaji_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-MODIFY `job_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+MODIFY `job_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `konten`
 --
 ALTER TABLE `konten`
-MODIFY `konten_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `konten_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `kreator`
 --
@@ -432,22 +442,22 @@ MODIFY `kreator_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `order_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-MODIFY `paket_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `paket_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-MODIFY `payment_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `payment_id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `pendapatan`
 --
 ALTER TABLE `pendapatan`
-MODIFY `pendapatan_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `pendapatan_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --

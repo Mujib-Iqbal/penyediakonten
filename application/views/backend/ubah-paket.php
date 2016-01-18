@@ -11,9 +11,9 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-solid box-info">
           <div class="box-header">
-            <h3 class="box-title">Tambah Paket</h3>
+            <h3 class="box-title">Edit Paket</h3>
           </div><!-- /.box-header -->
           <!-- form start -->
           <form method="POST" action="<?php echo base_url('dashboard/paket/edit/'.$paket->paket_id) ?>" role="form">

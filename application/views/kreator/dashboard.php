@@ -16,8 +16,8 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h4><b><?=$order ?></b></h4>
-            <p>Total Order</p>
+            <h4><b><?=$job ?></b></h4>
+            <p>Total Job</p>
           </div>
           <div class="icon">
             <i class="ion ion-ios-cart-outline"></i>
@@ -29,8 +29,8 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h4><b><?=rupiah($pendapatan->pendapatan_jumlah) ?></b><sup style="font-size: 20px"></sup></h4>
-            <p>Total Pendapatan</p>
+            <h4><b><?=rupiah($gaji->gaji_jumlah) ?></b><sup style="font-size: 20px"></sup></h4>
+            <p>Total Gaji</p>
           </div>
           <div class="icon">
             <i class="ion ion-ios-briefcase-outline"></i>
@@ -42,8 +42,8 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h4><b><?=$customer ?></b></h4>
-            <p>Total Customer</p>
+            <h4><b><?=$konten ?></b></h4>
+            <p>Total Konten</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
@@ -55,7 +55,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-            <h4><b><?=$kreator ?></b></h4>
+            <h4><b></b></h4>
             <p>Total Kreator</p>
           </div>
           <div class="icon">

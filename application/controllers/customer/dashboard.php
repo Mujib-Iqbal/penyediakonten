@@ -10,12 +10,14 @@ class Dashboard extends CI_Controller {
         if (!$this->session->userdata('customer_logged_in')) {
             redirect('customer/login');
         }
-       // $this->load->model('backend/order_model');
+        $this->load->model('order_model');
+        $this->load->model('konten_model');
     }
 
     public function index() {
-        
-        $this->template->customer('edit-profil');
+        $data['order']=$this->order_model->totalByCustomer($this->session->userdata('customer_id'));
+        $data['konten']=$this->konten_model->totalByCustomer($this->session->userdata('customer_id'));
+        $this->template->customer('dashboard', $data);
     }
 
 

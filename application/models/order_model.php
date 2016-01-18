@@ -9,6 +9,15 @@ class Order_model extends CI_Model {
         return $this->db->insert('order', $data);
     }
 
+    function total() {
+        return $this->db->count_all('order');
+    }
+
+    function totalByCustomer($id) {
+        $this->db->where('pemesan_id', $id);
+        return $this->db->count_all_results('order');
+    }
+
     function view($pemesan_id = NULL, $status = NULL) {
         $this->db->join('customer', 'customer.customer_id = order.pemesan_id');
         $this->db->join('paket', 'paket.paket_id = order.paket_id');
