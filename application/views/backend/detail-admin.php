@@ -10,41 +10,34 @@
   <!-- Main content -->
   <section class="content">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="box box-solid box-primary">
-          <div class="box-header">
-            <h3 class="box-title">Detail Admin</h3>
-          </div><!-- /.box-header -->
-          <!-- form start -->
-          <form role="form">
-            <div class="box-body">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Nama</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Nama">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="Email" class="form-control" id="exampleInputPassword1" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">User Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter User Name">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
-              </div>
+        <div class="col-xs-12">
+          <div class="box box-solid box-info">
+            <div class="box-header">
+              <h3 class="box-title">Detail Admin</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tr>
+                  <td><strong>Nama</strong></td>
+                  <td><strong>:</strong></td>
+                  <td><?=$admin->admin_nama ?></td>
+                </tr>
+                <tr>
+                  <td><strong>User Name</strong></td>
+                  <td><strong>:</strong></td>
+                  <td><?=$admin->admin_username ?></td>
+                </tr>
+                <tr>
+                  <td><strong>Email</strong></td>
+                  <td><strong>:</strong></td>
+                  <td><?=$admin->admin_email ?></td>
+                </tr>
+              </table>
             </div><!-- /.box-body -->
-            <div class="box-footer">
-              <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div><!-- /.row -->
-  </section><!-- /.content -->
-</div><!-- /.content-wrapper -->
+          </div><!-- /.box -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </section><!-- /.content -->
+  </div><!-- /.content-wrapper -->
+
+  

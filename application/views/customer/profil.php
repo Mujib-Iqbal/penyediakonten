@@ -11,59 +11,61 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="nav-tabs-custom">
-          <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab_1" data-toggle="tab">Profil</a></li>
-            <li><a href="#tab_2" data-toggle="tab">Password</a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tab_1">
-              <form method="POST" action="<?php echo base_url('customer/user/profil/'.$this->session->userdata('customer_id')) ?>" role="form">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label>Nama</label>
-                    <?php echo form_error('nama'); ?>
-                    <input type="text" class="form-control" placeholder="Nama" value="<?php echo set_value('nama', $this->session->userdata('customer_nama')) ?>" >
-                  </div>
-                  <div class="form-group">
-                    <label>Email</label>
-                    <?php echo form_error('email'); ?>
-                    <input type="Email" class="form-control" placeholder="Email" value="<?php echo set_value('email', $this->session->userdata('customer_email')) ?>">
-                  </div>
-                  <div class="form-group">
-                    <label>User Name</label>
-                    <?php echo form_error('username'); ?>
-                    <input type="text" class="form-control" placeholder="User Name" value="<?php echo set_value('username', $this->session->userdata('customer_username')) ?>">
-                  </div>
-                </div><!-- /.box-body -->
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-success">Simpan</button>
-                </div>
-              </form>
-            </div><!-- /.tab-pane -->
-            <div class="tab-pane" id="tab_2">
-              <form method="POST" action="<?php echo base_url('customer/user/profil/'.$this->session->userdata('customer_id')) ?>" role="form">
-                <div class="box-body">
-                  <div class="form-group">
-                    <label>Password</label>
-                    <?php echo form_error('password'); ?>
-                    <input type="password" class="form-control" placeholder="Password" value="<?php echo set_value('password', $this->session->userdata('customer_password')) ?>">
-                  </div>
-                  <div class="form-group">
-                    <label>Confirm Password</label>
-                    <?php echo form_error('confirmpassword'); ?>
-                    <input type="password" class="form-control" placeholder="Confrim Password" value="<?php echo set_value('confirmpassword', $this->session->userdata('customer_password')) ?>">
-                  </div>
-                </div><!-- /.box-body -->
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-success">Simpan</button>
-                </div>
-              </form>
-            </div><!-- /.tab-pane -->
-          </div><!-- /.tab-content -->
-        </div><!-- nav-tabs-custom -->
+        <?php if ($this->session->flashdata('success')) : ?>
+        <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
+        <?php endif; ?>
+        <?php if ($this->session->flashdata('danger')) : ?>
+        <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
+        <?php endif; ?>
+        <div class="box box-solid box-success">
+          <div class="box-header">
+            <h3 class="box-title">My Profil</h3>
+          </div><!-- /.box-header -->
+          <!-- form start -->
+          <form method="POST" action="<?php echo base_url('customer/user/profil/'.$this->session->userdata('customer_id')) ?>" role="form">
+            <div class="box-body">
+              <div class="form-group">
+                <label>Nama</label>
+                <?php echo form_error('nama'); ?>
+                <input name="nama" type="text" class="form-control" placeholder="Nama" value="<?php echo set_value('nama', $this->session->userdata('customer_nama')) ?>" >
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <?php echo form_error('email'); ?>
+                <input name="email" type="Email" class="form-control" placeholder="Email" value="<?php echo set_value('email', $this->session->userdata('customer_email')) ?>">
+              </div>
+              <div class="form-group">
+                <label>User Name</label>
+                <?php echo form_error('username'); ?>
+                <input name="username" type="text" class="form-control" placeholder="User Name" value="<?php echo set_value('username', $this->session->userdata('customer_username')) ?>">
+              </div>
+              <div class="form-group">
+                <label>Alamat</label>
+                <?php echo form_error('alamat'); ?>
+                <input name="alamat" type="text" class="form-control" placeholder="Alamat" value="<?php echo set_value('alamat', $this->session->userdata('customer_alamat')) ?>">
+              </div>
+              <div class="form-group">
+                <label>No Telefon</label>
+                <?php echo form_error('telefon'); ?>
+                <input name="telefon" type="text" class="form-control" placeholder="No Telefon" value="<?php echo set_value('telefon', $this->session->userdata('customer_telefon')) ?>">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <?php echo form_error('password'); ?>
+                <input name="password" type="password" class="form-control" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <?php echo form_error('confirmpassword'); ?>
+                <input name="confirmpassword" type="password" class="form-control" placeholder="Confrim Password">
+              </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+              <button type="submit" class="btn btn-success">Simpan</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </div><!-- /.row -->
   </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
-

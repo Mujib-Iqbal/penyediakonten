@@ -21,7 +21,7 @@
               <div class="form-group">
                 <label>Nama</label>
                 <?php echo form_error('nama'); ?>
-                <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama'); ?>">
+                <input type="text" class="form-control" name="nama" placeholder="Nama" value="<?php echo set_value('nama'); ?>">
               </div>
               <div class="form-group">
                 <label>Email</label>

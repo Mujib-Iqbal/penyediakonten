@@ -17,26 +17,26 @@
         <!-- <pre><?=var_dump ($order)?></pre> -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h4><b><?=$order ?></b></h4>
+            <h4><b><?=$order ?></b><sup style="font-size: 60px"></sup></h4>
             <p>Total Order</p>
           </div>
           <div class="icon">
             <i class="ion ion-ios-cart-outline"></i>
           </div>
-          <a href="<?php echo base_url('dashboard/order/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('customer/order/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div><!-- ./col -->
       <div class="col-lg-6 col-xs-6">
         <!-- small box -->
-        <div class="small-box bg-green">
+        <div class="small-box bg-red">
           <div class="inner">
             <h4><b><?=$konten ?></b><sup style="font-size: 60px"></sup></h4>
             <p>Total Konten</p>
           </div>
           <div class="icon">
-            <i class="ion ion-ios-cube-outline"></i>
+            <i class="ion ion-bag"></i>
           </div>
-          <a href="<?php echo base_url('dashboard/pendapatan/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="<?php echo base_url('customer/konten/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div><!-- ./col -->
     </div><!-- /.row -->

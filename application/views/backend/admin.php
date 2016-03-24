@@ -22,7 +22,7 @@
             <h3 class="box-title">Daftar Admin</h3>
           </div><!-- /.box-header -->
           <div class="box-body">
-            <table id="example2" class="table table-bordered table-hover">
+            <table id="tabel" class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -40,7 +40,7 @@
                   <td><?=$value->admin_username ?></td>
                   <td><?=$value->admin_email ?></td>
                   <td>
-                    <a class="btn btn-info btn-flat"  href="<?=base_url('dashboard/admin/edit/'.$value->admin_id) ?>"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-info btn-flat"  href="<?=base_url('dashboard/admin/detail/'.$value->admin_id) ?>"><i class="fa fa-eye"></i></a>
                     <a class="btn btn-danger btn-flat"  href="<?=base_url('dashboard/admin/delete/'.$value->admin_id) ?>"><i class="fa fa-trash-o"></i></a>
                   </td>
                 </tr>

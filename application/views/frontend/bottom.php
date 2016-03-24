@@ -34,10 +34,10 @@
         <h4>Customer</h4>
         <div>
           <ul class="arrow">
-            <li><a href="#">Daftar Menjadi Customer</a></li>
-            <li><a href="#">Dashboard Customer</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Paket Konten</a></li>
+            <li><a href="<?php echo base_url('daftar/cust') ?>">Daftar Menjadi Customer</a></li>
+            <li><a href="<?php echo base_url('customer') ?>">Dashboard Customer</a></li>
+            <!-- <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li> -->
+            <li><a href="<?php echo base_url('paket') ?>">Paket Konten</a></li>
           </ul>
         </div>  
       </div>
@@ -48,10 +48,10 @@
         <h4>Kreator</h4>
         <div>
           <ul class="arrow">
-            <li><a href="#">Daftar Menjadi Kreator</a></li>
-            <li><a href="#">Dashboard Kreator</a></li>
-            <li><a href="#">Karir</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="<?php echo base_url('daftar/kreator') ?>">Daftar Menjadi Kreator</a></li>
+            <li><a href="<?php echo base_url('kreator') ?>">Dashboard Kreator</a></li>
+            <li><a href="<?php echo base_url('karir') ?>">Karir</a></li>
+            <!-- <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li> -->
           </ul>
         </div>  
       </div>
@@ -62,11 +62,11 @@
         <h4>Penyedia Konten</h4>
         <div>
           <ul class="arrow">
-            <li><a href="#">Tentang Kami</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Paket Konten</a></li>
-            <li><a href="#">Karir</a></li>
-            <li><a href="#">Kontak Kami</a></li>
+            <li><a href="<?php echo base_url('tentangkami') ?>">Tentang Kami</a></li>
+            <!-- <li><a href="<?php echo base_url('faq') ?>">FAQ</a></li> -->
+            <li><a href="<?php echo base_url('paket') ?>">Paket Konten</a></li>
+            <li><a href="<?php echo base_url('karir') ?>">Karir</a></li>
+            <li><a href="<?php echo base_url('kontak') ?>">Kontak Kami</a></li>
           </ul>
         </div>  
       </div>

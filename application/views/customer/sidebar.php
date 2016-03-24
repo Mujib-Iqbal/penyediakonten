@@ -12,8 +12,8 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="<?php if ($this->uri->segment(2)=='' OR $this->uri->segment(2)=='index') echo 'active'; ?>">
-        <a href="<?php echo base_url('customer'); ?>">
+      <li class="<?php if ($this->uri->segment(2)=='dashboard') echo 'active'; ?>">
+        <a href="<?php echo base_url('customer/dashboard'); ?>">
           <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
         </a>
       </li>
@@ -34,21 +34,21 @@
           <li class="<?php if ($this->uri->segment(2)=='payment' AND $this->uri->segment(3)=='confirm') echo 'active'; ?>"><a href="<?php echo base_url('customer/payment/confirm'); ?>"><i class="fa fa-info"></i> Konfirmasi Pembayaran</a></li>
         </ul>
       </li>
-      <li class="<?php if ($this->uri->segment(2)=='content') echo 'active'; ?>">
+      <li class="<?php if ($this->uri->segment(2)=='konten') echo 'active'; ?>">
         <a href="#">
           <i class="fa fa-gift"></i> <span>Konten</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-          <li class="<?php if ($this->uri->segment(2)=='content' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('customer/content/view'); ?>"><i class="fa fa-server"></i> Lihat Konten </a></li>
+          <li class="<?php if ($this->uri->segment(2)=='konten' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('customer/konten/view'); ?>"><i class="fa fa-server"></i> Lihat Konten </a></li>
         </ul>
       </li>
       <li class="<?php if ($this->uri->segment(2)=='user') echo 'active'; ?>">
-        <a href="#">
-          <i class="fa fa-male"></i> <span>Profil</span> <i class="fa fa-angle-left pull-right"></i>
+        <a href="<?php echo base_url('customer/user/profil'); ?>">
+          <i class="fa fa-male"></i> <span>Profil</span></i>
         </a>
-        <ul class="treeview-menu">
+        <!-- <ul class="treeview-menu">
           <li class="<?php if ($this->uri->segment(2)=='user' AND $this->uri->segment(3)=='profil') echo 'active'; ?>"><a href="<?php echo base_url('customer/user/profil'); ?>"><i class="fa fa-user"></i> My Profil </a></li>
-        </ul>
+        </ul> -->
       </li>
     </ul>
   </section>

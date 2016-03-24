@@ -17,7 +17,7 @@
         <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
         <?php endif; ?>
-    <div class="box box-primary">
+    <div class="box box-danger">
       <div class="box-header">
         <h3 class="box-title">Daftar Konten</h3>
       </div><!-- /.box-header -->
@@ -45,7 +45,8 @@
                 <?php if($value->konten_status == 'ditolak'): ?>
                 <a class="btn btn-block btn-info btn-flat" href="<?=base_url('kreator/konten/resubmit/'.$value->konten_id) ?>"><i class="fa fa-refresh"></i></a>
                 <?php endif; ?>
-                <a class="btn btn-block btn-danger btn-flat" href="<?=base_url('kreator/konten/delete/'.$value->konten_id) ?>"><i class="fa fa-trash"></i></a>
+                <a class="btn btn-info btn-flat"  href="<?=base_url('kreator/job/detail/'.$value->job_id) ?>"><i class="fa fa-eye"></i></a>
+                <a class="btn btn-danger btn-flat" href="<?=base_url('kreator/konten/delete/'.$value->konten_id) ?>"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>

@@ -1,4 +1,3 @@
-<!--Header-->
     <header class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
@@ -16,9 +15,9 @@
                         <li class="<?php if ($this->uri->segment(1)=='tentangkami' OR $this->uri->segment(1)=='') echo 'active"'; ?>">
                             <a href="<?php echo base_url('tentangkami'); ?>">Tentang Kami</a>
                         </li>
-                        <li class="<?php if ($this->uri->segment(1)=='faq' OR $this->uri->segment(1)=='') echo 'active"'; ?>">
+                        <!-- <li class="<?php if ($this->uri->segment(1)=='faq' OR $this->uri->segment(1)=='') echo 'active"'; ?>">
                             <a href="<?php echo base_url('faq'); ?>">FAQ</a>
-                        </li>
+                        </li> -->
                         <li class="<?php if ($this->uri->segment(1)=='paket' OR $this->uri->segment(1)=='') echo 'active"'; ?>">
                             <a href="<?php echo base_url('paket'); ?>">Paket</a>
                         </li>
@@ -28,12 +27,11 @@
                         <li class="<?php if ($this->uri->segment(1)=='kontak' OR $this->uri->segment(1)=='') echo 'active"'; ?>">
                             <a href="<?php echo base_url('kontak'); ?>">Kontak</a>
                         </li>
-                        <li class="login">
+                        <!-- <li class="login">
                             <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
-                        </li>
+                        </li> -->
                     </ul>        
                 </div><!--/.nav-collapse -->
             </div>
         </div>
     </header>
-    <!-- /header -->

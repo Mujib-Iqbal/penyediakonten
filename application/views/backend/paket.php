@@ -19,7 +19,7 @@
       <?php endif; ?>
       <div class="box box-info">
         <div class="box-header">
-          <h3 class="box-title">Lihat Paket</h3>
+          <h3 class="box-title">Daftar Paket</h3>
         </div><!-- /.box-header -->
         <div class="box-body">
           <table id="tabel" class="table table-bordered table-hover">

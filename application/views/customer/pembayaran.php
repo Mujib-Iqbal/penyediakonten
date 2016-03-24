@@ -16,7 +16,7 @@
         <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
         <?php endif; ?>
-        <div class="box box-success">
+        <div class="box box-solid box-success">
           <div class="box-header">
             <h3 class="box-title">Konfirmasi Pembayaran</h3>
           </div><!-- /.box-header -->
@@ -24,7 +24,7 @@
           <form role="form" method="POST" action="<?=base_url('customer/payment/confirm') ?>">
             <div class="box-body">
               <div class="form-group">
-                <label>Order</label> <br>
+                <label>Order ID</label> <br>
                 <?=form_error('order'); ?>
                 <!-- Single button -->
                 <div class="btn-group">
@@ -47,7 +47,7 @@
               </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
-              <button type="submit" class="btn btn-primary btn-flat">Submit</button>
+              <button type="submit" class="btn btn-success btn-flat">Kirim</button>
             </div>
           </form>
         </div>

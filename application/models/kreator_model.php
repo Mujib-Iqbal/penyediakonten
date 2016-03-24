@@ -13,6 +13,10 @@ class Kreator_model extends CI_Model {
         return $this->db->insert('kreator', $data);
     }
 
+    function kreator($data) {
+        return $this->db->insert('kreator', $data);
+    }
+
     function view() {
 		return $this->db->get('kreator')->result();
 	}

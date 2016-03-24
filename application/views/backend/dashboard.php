@@ -46,7 +46,7 @@
             <p>Total Customer</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="ion ion-person"></i>
           </div>
           <a href="<?php echo base_url('dashboard/customer/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -59,7 +59,7 @@
             <p>Total Kreator</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="ion ion-person"></i>
           </div>
           <a href="<?php echo base_url('dashboard/kreator/view');?>" class="small-box-footer">Detail <i class="fa fa-arrow-circle-right"></i></a>
         </div>

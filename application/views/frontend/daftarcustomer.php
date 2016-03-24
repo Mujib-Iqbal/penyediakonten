@@ -11,68 +11,50 @@
 
 
   <section id="registration-page" class="container">
-    <form class="center" action="<?php echo base_url('daftar/cust') ?>" method="POST" role="form">
+    <form method="POST" class="center" action="<?php echo base_url('daftar/cust') ?>" role="form">
       <fieldset class="registration-form">
         <div class="control-group">
           <!-- Nama Lengkap -->
-          <label>Nama Lengkap</label>
+          <!-- <label>Nama Lengkap</label> -->
           <?php echo form_error('nama'); ?>
           <div class="controls">
-            <input type="text" id="nama" name="nama" placeholder="Nama" class="input-xlarge" value="<?php echo set_value('nama'); ?>">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <!-- No Telefon -->
-          <label>No Telefon</label>
-          <?php echo form_error('telefon'); ?>
-          <div class="controls">
-            <input type="text" id="telefon" name="telefon" placeholder="No Telefon" class="input-xlarge" value="<?php echo set_value('telefon'); ?>">
-          </div>
-        </div>
-
-        <div class="control-group">
-          <!-- Alamat -->
-          <label>Alamat</label>
-          <?php echo form_error('alamat'); ?>
-          <div class="controls">
-            <input type="text" id="alamat" name="alamat" placeholder="Alamat" class="input-xlarge" value="<?php echo set_value('alamat'); ?>">
+            <input type="text"  name="nama" placeholder="Nama" class="input-xlarge" value="<?php echo set_value('nama'); ?>">
           </div>
         </div>
 
         <div class="control-group">
           <!-- Username -->
-          <label>User Name</label>
+          <!-- <label>User Name</label> -->
           <?php echo form_error('username'); ?>
           <div class="controls">
-            <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge" value="<?php echo set_value('username'); ?>">
+            <input type="text" name="username" placeholder="Username" class="input-xlarge" value="<?php echo set_value('username'); ?>">
           </div>
         </div>
 
         <div class="control-group">
           <!-- E-mail -->
-          <label>E-mail</label>
+          <!-- <label>E-mail</label> -->
           <?php echo form_error('email'); ?>
           <div class="controls">
-            <input type="text" id="email" name="email" placeholder="E-mail" class="input-xlarge" value="<?php echo set_value('email'); ?>">
+            <input type="text"  name="email" placeholder="E-mail" class="input-xlarge" value="<?php echo set_value('email'); ?>">
           </div>
         </div>
 
         <div class="control-group">
           <!-- Password-->
-          <label>Password</label>
+          <!-- <label>Password</label> -->
           <?php echo form_error('password'); ?>
           <div class="controls">
-            <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge" value="<?php echo set_value('password'); ?>">
+            <input type="password" name="password" placeholder="Password" class="input-xlarge" value="<?php echo set_value('password'); ?>">
           </div>
         </div>
 
         <div class="control-group">
           <!-- Confirm Password -->
-          <label>Confirm Password</label>
+          <!-- <label>Confirm Password</label> -->
           <?php echo form_error('confirmpassword'); ?>
           <div class="controls">
-            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Password (Confirm)" class="input-xlarge" value="<?php echo set_value('confirmpassword'); ?>">
+            <input type="password"  name="confirmpassword" placeholder="Password (Confirm)" class="input-xlarge" value="<?php echo set_value('confirmpassword'); ?>">
           </div>
         </div>
 

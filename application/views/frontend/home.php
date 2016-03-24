@@ -9,9 +9,9 @@
                 <div class="sl-slide-inner">
                     <div class="container">
                         <img class="pull-right" src="<?php echo base_url('assets/frontend/images/sample/slider/img1.png'); ?>" alt="" />
-                        <h2>Creative Ideas</h2>
-                        <h3 class="gap">Tincidunt condimentum eros</h3>
-                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
+                        <h2>Great Content</h2>
+                        <h3 class="gap">konten adalah segalanya</h3>
+                        <!-- <a class="btn btn-large btn-transparent" href="#">Learn More</a> -->
                     </div>
                 </div>
             </div>

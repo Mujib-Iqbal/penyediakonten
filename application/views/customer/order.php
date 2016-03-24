@@ -16,9 +16,9 @@
       <?php if ($this->session->flashdata('danger')) : ?>
       <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
     <?php endif; ?>
-    <div class="box box-info">
+    <div class="box box-success">
       <div class="box-header">
-        <h3 class="box-title">Lihat Order</h3>
+        <h3 class="box-title">Daftar Order</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
         <table id="tabel" class="table table-bordered table-hover">
@@ -45,7 +45,9 @@
               <td><?=ucwords($value->order_status) ?></td>
               <td><?=(is_null($value->job_progress)) ? '-' : $value->job_progress ?></td>
               <td>
-                <a class="btn btn-success btn-flat"  href="<?=base_url('customer/order/detail/'.$value->order_id) ?>"><i class="fa fa-eye"></i></a>
+                <a class="btn btn-info btn-flat"  href="<?=base_url('customer/order/detail/'.$value->order_id) ?>"><i class="fa fa-eye"></i></a>
+                <!-- <a <?php if ($value->order_status=='Pengerjaan') echo 'disabled ="disabled"'; ?>  class=" btn btn-danger btn-flat"  href="<?=base_url('customer/order/delete/'.$value->order_id) ?>"><i class="fa fa-trash-o"></i></a> -->
+                <!-- <a class="btn btn-danger btn-flat <?php if ($value->order_status=='Pengerjaan') echo 'disabled';?>"  href="<?=base_url('customer/order/delete/'.$value->order_id) ?>"><i class="fa fa-trash-o"></i></a> -->
               </td>
             </tr>
           <?php endforeach; ?>

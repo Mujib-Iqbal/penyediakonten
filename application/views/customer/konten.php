@@ -11,18 +11,18 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <?php if ($this->session->flashdata('success')) : ?>
-        <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
+      <?php if ($this->session->flashdata('success')) : ?>
+      <div class="alert alert-success"><?php echo $this->session->flashdata('success'); ?></div>
       <?php endif; ?>
       <?php if ($this->session->flashdata('danger')) : ?>
       <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
     <?php endif; ?>
-    <div class="box box-warning">
+    <div class="box box-success">
       <div class="box-header">
-        <h3 class="box-title">Konten</h3>
+        <h3 class="box-title">Daftar Konten</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="table" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>
@@ -42,15 +42,15 @@
               <td><?=$value->konten_keterangan?></td>
               <td><?=$value->konten_file?></td>
               <td>
-                <a href="<?=base_url('uploads/'.$value->konten_file) ?>" class="btn btn-block btn-info btn-flat"><i class="fa fa-download"></i></a>
+                <a href="<?=base_url('uploads/'.$value->konten_file) ?>" class="btn btn-block btn-warning btn-flat"><i class="fa fa-download"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>
-          </tbody>
-        </table>
-      </div><!-- /.box-body -->
-    </div><!-- /.box -->
-  </div><!-- /.col -->
+        </tbody>
+      </table>
+    </div><!-- /.box-body -->
+  </div><!-- /.box -->
+</div><!-- /.col -->
 </div><!-- /.row -->
 </section><!-- /.content -->
 </div><!-- /.content-wrapper -->

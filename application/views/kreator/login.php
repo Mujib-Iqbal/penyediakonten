@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Admin | Log in</title>
+  <title>Kreator | Log in</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
   <!-- Bootstrap 3.3.2 -->
   <link href="<?php echo base_url('assets/backend/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css">
@@ -38,6 +38,7 @@
                 <input name="password" type="password" class="form-control" placeholder="Password"/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
               </div>
+            <a href="<?php echo base_url('daftar/kreator'); ?>">Belum punya akun kreator?</a><br>
               <div class="row">
                 <div class="col-xs-4 pull-right">
                   <button type="submit" class="btn btn-primary btn-block btn-flat ">Sign In</button>

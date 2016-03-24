@@ -18,19 +18,9 @@ class Daftar extends CI_Controller {
                 'rules' => 'required|trim|max_length[25]'
                 ),
             array(
-                'field' => 'telefon',
-                'label' => 'No Telefon',
-                'rules' => 'required|trim|integer|max_length[15]'
-                ),
-            array(
                 'field' => 'email',
                 'label' => 'Email',
                 'rules' => 'required|valid_email|max_length[50]'
-                ),
-            array(
-                'field' => 'alamat',
-                'label' => 'Alamat',
-                'rules' => 'required|trim|max_length[50]'
                 ),
             array(
                 'field' => 'password',
@@ -67,6 +57,7 @@ class Daftar extends CI_Controller {
         // Jika ada data dari submit form
         // Proses Validasi
         $validation = $this->form_validation->run();
+        // var_dump($validation);die();
 
         // Jika validasi salah maka tampilkan form tambah paket beserta pesan errornya
         if ($validation == FALSE) {
@@ -76,16 +67,49 @@ class Daftar extends CI_Controller {
         //Jika validasi benar maka masukan data ke database
         $data = array(
             'customer_nama' => $this->input->post('nama'),
-            'customer_telefon' => $this->input->post('telefon'),
-            'customer_alamat' => $this->input->post('alamat'),
+            // 'customer_telefon' => $this->input->post('telefon'),
+            // 'customer_alamat' => $this->input->post('alamat'),
             'customer_username' => $this->input->post('username'),
             'customer_email' => $this->input->post('email'),
             'customer_password' => md5($this->input->post('password')),
             );
         $this->customer_model->add($data);
         $this->session->set_flashdata('success', 'Data berhasil ditambahkan.');
+        // var_dump($data['cutomer_nama']);
+        // return 'ok';
+        
         return redirect('customer/login');
     }
+
+    public function kreator() {
+
+        if (!$this->input->post()) {
+            // Jika tidak ada data dari submit form maka akan ditampilkan halaman "tambah paket"
+            return $this->template->frontend('daftarkreator');
+        }
+
+        // Jika ada data dari submit form
+        // Proses Validasi
+        $validation = $this->form_validation->run();
+
+        // Jika validasi salah maka tampilkan form tambah paket beserta pesan errornya
+        if ($validation == FALSE) {
+            return $this->template->frontend('daftarkreator');
+        }
+        
+        //Jika validasi benar maka masukan data ke database
+        $data = array(
+            'kreator_nama' => $this->input->post('nama'),
+            'kreator_username' => $this->input->post('username'),
+            'kreator_email' => $this->input->post('email'),
+            'kreator_password' => md5($this->input->post('password')),
+            );
+        $this->kreator_model->add($data);
+        $this->session->set_flashdata('success', 'Data berhasil ditambahkan.');
+
+        return redirect('kreator/login');
+    }
+
 
    
 

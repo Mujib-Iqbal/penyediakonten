@@ -19,13 +19,14 @@
     <?php endif; ?>
     <div class="box box-info">
       <div class="box-header">
-        <h3 class="box-title">Konten</h3>
+        <h3 class="box-title">Daftar Konten</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="table" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Konten ID</th>
+              <th>Job ID</th>
               <th>Kreator</th>
               <th>Nama</th>
               <th>Keterangan</th>
@@ -38,6 +39,7 @@
             <?php foreach($konten as $value): ?>
             <tr>
               <td><?=$value->konten_id?></td>
+              <td><?=$value->job_id ?></td>
               <td><?=$value->kreator_nama?></td>
               <td><?=$value->konten_nama?></td>
               <td><?=$value->konten_keterangan?></td>

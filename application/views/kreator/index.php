@@ -60,15 +60,14 @@
         <!-- SlimScroll -->
         <script src="<?php echo base_url('assets/backend/plugins/slimScroll/jquery.slimscroll.min.js'); ?>" type="text/javascript"></script> 
         <!-- page script -->
-        $(function () {
-          $("#example1").dataTable();
-          $('#example2').dataTable({
-            "bPaginate": true,
-            "bLengthChange": false,
-            "bFilter": false,
-            "bSort": true,
-            "bInfo": true,
-            "bAutoWidth": false
+        <script type="text/javascript">
+        $(document).ready(function() {
+          $('#tabel').dataTable({
+            //"aaSorting": [[0,'desc']],
+            "bSort": false,
+            "oLanguage": {
+              "sUrl": "//cdn.datatables.net/plug-ins/f2c75b7247b/i18n/Indonesian.json"
+            }
           });
         });
         </script>

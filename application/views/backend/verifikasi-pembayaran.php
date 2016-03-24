@@ -22,7 +22,7 @@
             <h3 class="box-title">Verifikasi Pembayaran</h3>
           </div><!-- /.box-header -->
           <div class="box-body">
-            <table id="example2" class="table table-bordered table-hover">
+            <table id="tabel" class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>ID Pembayaran</th>

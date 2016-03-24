@@ -12,6 +12,10 @@ class Customer_model extends CI_Model {
     function add($data) {
         return $this->db->insert('customer', $data);
     }
+    
+    function cust($data) {
+        return $this->db->insert('customer', $data);
+    }
 
     function view() {
 		return $this->db->get('customer')->result();
@@ -21,6 +25,11 @@ class Customer_model extends CI_Model {
 		$this->db->where('customer_id', $id);
 		return $this->db->get('customer')->row();
 	}
+
+    function update($id, $data) {
+        $this->db->where('customer_id', $id);
+        return $this->db->update('customer', $data);
+    }
 
 	function removeable($id) {
         $this->db->where('customer.customer_id', $id);

@@ -91,6 +91,29 @@ class Admin extends CI_Controller {
         return $this->template->backend('admin', $data);
     }
 
+    // Menampilkan halaman detail customer
+    public function detail($id) {
+        // Cek apakah URL terdapat id customer atau tidak
+        if (is_null($id)) {
+            // Jika tidak ada maka redirect ke halaman pembayaran
+            return redirect('dashboard/admin/view');
+        }
+
+        // Ambil data customer berdasarkan id tersebut
+        $data['admin'] = $this->admin_model->get($id);
+
+        // Cek apakah terdapat data customer dengan id tersebut
+        if (count($data['admin'])==0) {
+            // Jika tidak ada data customer dengan id tersebut redirect ke halaman customer dengan pesan error
+            $this->session->set_flashdata('danger', 'Data tidak ditemukan');
+            return redirect('dashboard/admin/view');
+        }
+
+        // Jika ada tampilkan halaman detail pembayaran
+        $this->template->backend('detail-admin', $data);
+
+    }
+
     public function edit($id) {
 
         // Ambil data paket dengan id tertentu

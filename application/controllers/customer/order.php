@@ -81,4 +81,15 @@ class Order extends CI_Controller {
         $this->template->customer('detail-order', $data);
     }
 
+    public function delete($id) {
+        // Cek ada tidaknya data yang dikirim
+        if (is_null($id)) {
+            // Jika tidak ada data dari submit form, redirect ke halaman "view order"
+            return redirect('customer/order/view');
+        }
+        $this->order_model->delete($id);
+
+        $this->session->set_flashdata('success', 'Order beserta data relasinya berhasil dihapus');
+        return redirect('customer/order/view');
+    }
 }

@@ -12,13 +12,10 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      <li class="<?php if ($this->uri->segment(2)=='' OR $this->uri->segment(2)=='index') echo 'active'; ?>">
-        <a href="">
-          <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+      <li class="<?php if ($this->uri->segment(2)=='dashboard') echo 'active'; ?>">
+        <a href="<?php echo base_url('kreator/dashboard'); ?>">
+          <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
         </a>
-        <ul class="treeview-menu">
-          <li class="active"><a href="<?php echo base_url('kreator'); ?>"><i class="fa fa-home"></i> Home</a></li>
-        </ul>
       </li>
       <li class="<?php if ($this->uri->segment(2)=='job' || $this->uri->segment(2)=='gaji') echo 'active'; ?> treeview">
         <a href="">
@@ -39,12 +36,9 @@
         </ul>
       </li>
       <li class="<?php if ($this->uri->segment(2)=='user') echo 'active'; ?> treeview">
-        <a href="">
-          <i class="fa fa-male"></i> <span>Profil</span> <i class="fa fa-angle-left pull-right"></i>
+        <a href="<?php echo base_url('kreator/user/profil'); ?>">
+          <i class="fa fa-male"></i> <span>Profil</span></i>
         </a>
-        <ul class="treeview-menu">
-          <li class="<?php if ($this->uri->segment(2)=='user' AND $this->uri->segment(3)=='profil') echo 'active'; ?>"><a href="<?php echo base_url('kreator/user/profil'); ?>"><i class="fa fa-user"></i> My Profil </a></li>
-        </ul>
       </li>
     </ul>
   </section>

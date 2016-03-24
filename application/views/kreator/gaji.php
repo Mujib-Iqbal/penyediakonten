@@ -17,7 +17,7 @@
         <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
         <?php endif; ?>
-    <div class="box box-primary">
+    <div class="box box-danger">
       <div class="box-header">
         <h3 class="box-title">Total Gaji : <?=rupiah($total->gaji_jumlah)?></h3>
       </div><!-- /.box-header -->

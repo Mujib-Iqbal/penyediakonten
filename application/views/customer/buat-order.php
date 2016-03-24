@@ -11,7 +11,7 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-success">
+        <div class="box box-solid box-success">
           <div class="box-header">
             <h3 class="box-title">Buat Order</h3>
           </div><!-- /.box-header -->
@@ -30,9 +30,10 @@
                 </div>
               </div>
               <div class="form-group">
-                <label>Jumlah</label>
+                <label>Jumlah Order</label>
                 <?=form_error('jumlah'); ?>
-                <input name="jumlah" type="text" class="form-control" placeholder="Jumlah" value="<?=set_value('jumlah'); ?>">
+                <input name="jumlah" type="text" class="form-control" placeholder="Jumlah Order" value="<?=set_value('jumlah'); ?>">
+                <p><i>Jumlah order adalah jumlah dari berapa kali paket yang akan diorder</i></p>
               </div>
               <div class="form-group">
                 <label>Keterangan</label>
@@ -45,7 +46,7 @@
               </div> -->
             </div><!-- /.box-body -->
             <div class="box-footer">
-              <button type="submit" class="btn btn-primary btn-flat">Submit</button>
+              <button type="submit" class="btn btn-success btn-flat">Tambahkan</button>
             </div>
           </form>
         </div>

@@ -11,7 +11,7 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-solid box-info">
+        <div class="box box-solid box-success">
           <div class="box-header">
             <h3 class="box-title">Detail Order</h3>
           </div><!-- /.box-header -->
@@ -66,7 +66,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <div class="box box-solid box-info">
+          <div class="box box-solid box-success">
             <div class="box-header">
               <h3 class="box-title">Detail Paket</h3>
             </div><!-- /.box-header -->

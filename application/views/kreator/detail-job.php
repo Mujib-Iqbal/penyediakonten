@@ -17,7 +17,7 @@
         <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
         <?php endif; ?>
-        <div class="box box-solid box-warning">
+        <div class="box box-solid box-danger">
           <div class="box-header">
             <h3 class="box-title">Detail Job</h3>
           </div><!-- /.box-header -->
@@ -108,7 +108,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <div class="box box-solid box-warning">
+        <div class="box box-solid box-danger">
           <div class="box-header">
             <h3 class="box-title">Detail Paket</h3>
           </div><!-- /.box-header -->

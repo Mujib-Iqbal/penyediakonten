@@ -18,10 +18,10 @@
         <?php endif; ?>
     <div class="box box-info">
       <div class="box-header">
-        <h3 class="box-title">Data Order</h3>
+        <h3 class="box-title">Daftar Order</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Order ID</th>

@@ -19,7 +19,7 @@
         <?php if ($error) : ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php endif; ?>
-        <div class="box box-solid box-warning">
+        <div class="box box-solid box-danger">
           <div class="box-header">
             <h3 class="box-title">Kirim Konten</h3>
           </div><!-- /.box-header -->
@@ -53,7 +53,7 @@
             </div><!-- /.box-body -->
 
             <div class="box-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-success">Kirim </button>
             </div>
           </form>
         </div><!-- /.box-body -->

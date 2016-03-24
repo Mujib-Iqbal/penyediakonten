@@ -21,7 +21,7 @@
               <div class="form-group">
                 <label>Nama Paket</label>
                 <?php echo form_error('nama'); ?>
-                <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama'); ?>">
+                <input type="text" class="form-control" name="nama" placeholder="Nama Paket" value="<?php echo set_value('nama'); ?>">
               </div>
               <div class="form-group">
                 <label>Jenis Konten</label> <br>
@@ -46,14 +46,14 @@
                 <input type="text" class="form-control" name="waktu" placeholder="Jangka Waktu" value="<?php echo set_value('waktu'); ?>">
               </div>
               <div class="form-group">
-                <label>Harga</label>
-                <?php echo form_error('harga'); ?>
-                <input type="text" class="form-control" name="harga" placeholder="Harga" value="<?php echo set_value('harga'); ?>">
-              </div>
-              <div class="form-group">
                 <label>Jumlah Koten</label>
                 <?php echo form_error('jumlah'); ?>
                 <input type="text" class="form-control" name="jumlah" placeholder="Jumlah Konten" value="<?php echo set_value('jumlah'); ?>">
+              </div>
+              <div class="form-group">
+                <label>Harga</label>
+                <?php echo form_error('harga'); ?>
+                <input type="text" class="form-control" name="harga" placeholder="Harga" value="<?php echo set_value('harga'); ?>">
               </div>
             </div><!-- /.box-body -->
             <div class="box-footer">

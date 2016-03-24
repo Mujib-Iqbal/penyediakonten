@@ -17,12 +17,12 @@
         <?php if ($this->session->flashdata('danger')) : ?>
         <div class="alert alert-danger"><?php echo $this->session->flashdata('danger'); ?></div>
         <?php endif; ?>
-    <div class="box box-primary">
+    <div class="box box-danger">
       <div class="box-header">
         <h3 class="box-title">Daftar Job</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Job ID</th>

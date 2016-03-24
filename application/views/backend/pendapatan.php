@@ -22,7 +22,7 @@
         <h3 class="box-title">Total Pendapatan : <?=rupiah($total->pendapatan_jumlah)?></h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="table" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>

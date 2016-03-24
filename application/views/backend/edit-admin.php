@@ -33,16 +33,6 @@
                 <?php echo form_error('username'); ?>
                 <input type="text" class="form-control" placeholder="User Name" value="<?php echo set_value('username', $admin->admin_username); ?>">
               </div>
-              <div class="form-group">
-                <label>Password</label>
-                <?php echo form_error('password'); ?>
-                <input type="password" class="form-control" placeholder="Password" value="<?php echo set_value('password', $admin->admin_password); ?>">
-              </div>
-              <div class="form-group">
-                <label>Confirm Password</label>
-                <?php echo form_error('confirmpassword'); ?>
-                <input type="password" class="form-control" placeholder="Confrim Password" value="<?php echo set_value('confirmpassword', $admin->admin_password); ?>">
-              </div>
             </div><!-- /.box-body -->
             <div class="box-footer">
               <button type="submit" class="btn btn-success">Simpan</button>
