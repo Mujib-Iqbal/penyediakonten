@@ -25,7 +25,7 @@
         <!-- <label>Nama Lengkap</label> -->
         <?php echo form_error('nama'); ?>
         <div class="controls">
-          <input type="text" id="nama" name="nama" placeholder="Nama" class="input-xlarge" value="<?php echo set_value('nama'); ?>">
+          <input type="text" id="nama" name="nama" placeholder="Nama" class="input-large" value="<?php echo set_value('nama'); ?>">
         </div>
       </div>
 
@@ -34,7 +34,7 @@
         <!-- <label>User Name</label> -->
         <?php echo form_error('username'); ?>
         <div class="controls">
-          <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge" value="<?php echo set_value('username'); ?>">
+          <input type="text" id="username" name="username" placeholder="Username" class="input-large" value="<?php echo set_value('username'); ?>">
         </div>
       </div>
 
@@ -43,8 +43,19 @@
         <!-- <label>E-mail</label> -->
         <?php echo form_error('email'); ?>
         <div class="controls">
-          <input type="text" id="email" name="email" placeholder="E-mail" class="input-xlarge" value="<?php echo set_value('email'); ?>">
+          <input type="text" id="email" name="email" placeholder="E-mail" class="input-large" value="<?php echo set_value('email'); ?>">
         </div>
+      </div>
+
+      <div class="form-group">
+        <label>Konten</label>
+        <?php echo form_error('konten'); ?>
+        <select class="form-control" name="konten">
+          <option value="teks" <?php if (set_value('konten') == 'teks')  echo 'selected'; ?>>Teks</option>
+          <option value="gambar" <?php if (set_value('konten') == 'gambar')  echo 'selected'; ?>>Gambar</option>
+          <option value="audio" <?php if (set_value('konten') == 'audio')  echo 'selected'; ?>>Audio</option>
+          <option value="video" <?php if (set_value('konten') == 'video')  echo 'selected'; ?>>Video</option>
+        </select>
       </div>
 
       <div class="control-group">
@@ -52,7 +63,7 @@
         <!-- <label>Password</label> -->
         <?php echo form_error('password'); ?>
         <div class="controls">
-          <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge" value="<?php echo set_value('password'); ?>">
+          <input type="password" id="password" name="password" placeholder="Password" class="input-large" value="<?php echo set_value('password'); ?>">
         </div>
       </div>
 
@@ -61,7 +72,7 @@
         <!-- <label>Confirm Password</label> -->
         <?php echo form_error('confirmpassword'); ?>
         <div class="controls">
-          <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Password (Confirm)" class="input-xlarge" value="<?php echo set_value('confirmpassword'); ?>">
+          <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Password (Confirm)" class="input-large" value="<?php echo set_value('confirmpassword'); ?>">
         </div>
       </div>
 

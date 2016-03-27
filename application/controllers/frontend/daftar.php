@@ -102,6 +102,7 @@ class Daftar extends CI_Controller {
             'kreator_nama' => $this->input->post('nama'),
             'kreator_username' => $this->input->post('username'),
             'kreator_email' => $this->input->post('email'),
+            'kreator_konten' => $this->input->post('konten'),
             'kreator_password' => md5($this->input->post('password')),
             );
         $this->kreator_model->add($data);

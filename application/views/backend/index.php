@@ -58,7 +58,7 @@
         $(document).ready(function() {
           $('#tabel').dataTable({
             //"aaSorting": [[0,'desc']],
-            "bSort": false,
+            "bSort": false, 
             "oLanguage": {
               "sUrl": "//cdn.datatables.net/plug-ins/f2c75b7247b/i18n/Indonesian.json"
             }
