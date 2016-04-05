@@ -1,9 +1,8 @@
-Right side column. Contains the navbar and content of the page -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Resubmit Konten
+      Revisi Konten
     </h1>
   </section>
 
@@ -21,9 +20,9 @@ Right side column. Contains the navbar and content of the page -->
         <?php if ($error) : ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php endif; ?>
-        <div class="box box-solid box-warning">
+        <div class="box box-solid box-danger">
           <div class="box-header">
-            <h3 class="box-title">Resubmit Konten</h3>
+            <h3 class="box-title">Revisi Konten</h3>
           </div><!-- /.box-header -->
           <div class="box-body no-padding">
             <?php echo form_open_multipart('kreator/konten/resubmit/'.$konten->konten_id);?>

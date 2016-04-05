@@ -25,6 +25,7 @@
           <table id="tabel" class="table table-bordered table-hover">
             <thead>
               <tr>
+                <th>ID</th>
                 <th>Nama Paket</th>
                 <th>Jenis konten</th>
                 <th>Jangka Waktu</th>
@@ -36,6 +37,7 @@
             <tbody>
               <?php foreach ($paket as $value) : ?>
               <tr>
+                <td><?=$value->paket_id; ?></td>
                 <td><?=$value->paket_nama; ?></td>
                 <td><?=$value->konten_jenis; ?></td>
                 <td><?=$value->paket_jangkawaktu; ?></td>

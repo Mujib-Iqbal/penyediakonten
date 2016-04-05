@@ -38,6 +38,7 @@ class Konten_model extends CI_Model {
         $this->db->join('jobs', 'jobs.job_id=konten.job_id');
         $this->db->join('kreator', 'kreator.kreator_id=jobs.kreator_id');
         $this->db->where('kreator.kreator_id', $this->session->userdata('kreator_id'));
+        $this->db->order_by('konten_id', 'desc');
         return $this->db->get('konten')->result();
     }
 
@@ -64,6 +65,8 @@ class Konten_model extends CI_Model {
         $this->db->join('jobs', 'jobs.job_id=konten.job_id');
         $this->db->join('order', 'jobs.order_id=order.order_id');
         $this->db->where('pemesan_id', $id);
+        $this->db->where('konten_status', 'diterima');
+        $this->db->order_by('konten_id', 'desc');
         return $this->db->get('konten')->result();
 
     }

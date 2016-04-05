@@ -43,7 +43,7 @@
               <td><?=ucwords($value->konten_status) ?></td>
               <td>
                 <?php if($value->konten_status == 'ditolak'): ?>
-                <a class="btn btn-block btn-info btn-flat" href="<?=base_url('kreator/konten/resubmit/'.$value->konten_id) ?>"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-info btn-flat" href="<?=base_url('kreator/konten/resubmit/'.$value->konten_id) ?>"><i class="fa fa-refresh"></i></a>
                 <?php endif; ?>
                 <a class="btn btn-info btn-flat"  href="<?=base_url('kreator/job/detail/'.$value->job_id) ?>"><i class="fa fa-eye"></i></a>
                 <a class="btn btn-danger btn-flat" href="<?=base_url('kreator/konten/delete/'.$value->konten_id) ?>"><i class="fa fa-trash"></i></a>
