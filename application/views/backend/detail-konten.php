@@ -144,7 +144,7 @@
           </div><!-- /.box-body -->
         </div><!-- /.box -->
 
-        <!-- Chat box -->
+        <!-- Chat komentar-->
         <div class="box box-solid box-info">
           <div class="box-header">
             <i class="fa fa-comments-o"></i>
