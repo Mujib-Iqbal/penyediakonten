@@ -34,16 +34,19 @@
                     <?php endforeach; ?>
                   </select>
                 </div>
+                <p><i>Order ID adalah id dari order anda. Pilih order ID yang telah anda bayar</i></p>
               </div>
               <div class="form-group">
-                <label>Jumlah</label>
+                <label>Jumlah Uang</label>
                 <?=form_error('jumlah'); ?>
-                <input name="jumlah" type="text" class="form-control" placeholder="Jumlah" value="<?=set_value('jumlah'); ?>">
+                <input name="jumlah" type="text" class="form-control" placeholder="Jumlah Uang" value="<?=set_value('jumlah'); ?>">
+                <p><i>Jumlah uang adalah jumlah uang yang telah ditransfer</i></p>
               </div>
               <div class="form-group">
                 <label>Keterangan</label>
                 <?=form_error('keterangan'); ?>
                 <textarea name="keterangan" class="form-control" rows="3" placeholder="Keterangan"><?=set_value('keterangan'); ?></textarea>
+                <p><i>Keterangan adalah keterangan ke rekening mana anda transfer. Misal: BCA, Mandiri, dll</i></p>
               </div>
             </div><!-- /.box-body -->
             <div class="box-footer">

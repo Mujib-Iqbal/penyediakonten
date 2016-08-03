@@ -46,7 +46,8 @@
               <td><a href="<?=base_url('uploads/'.$value->konten_file) ?>"><?=$value->konten_file?></a></td>
               <td><?=ucwords($value->konten_status)?></td>
               <td>
-                <a href="<?=base_url('dashboard/konten/detail/'.$value->konten_id)?>" class="btn btn-block btn-info btn-flat"><i class="fa fa-eye"></i></a>
+                <a href="<?=base_url('dashboard/konten/detail/'.$value->konten_id)?>" class="btn b btn-info btn-flat"><i class="fa fa-eye"></i></a>
+                <a href="<?=base_url('uploads/'.$value->konten_file)?>" class="btn b btn-warning btn-flat"><i class="fa fa-download"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>

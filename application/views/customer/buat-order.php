@@ -28,6 +28,7 @@
                     <?php endforeach; ?>
                   </select>
                 </div>
+                <p><i>Pilih Paket yang anda kehendaki</i></p>
               </div>
               <div class="form-group">
                 <label>Jumlah Order</label>
@@ -39,6 +40,7 @@
                 <label>Keterangan</label>
                 <?=form_error('keterangan'); ?>
                 <textarea name="keterangan" class="form-control" rows="3" placeholder="Keterangan"><?=set_value('keterangan'); ?></textarea>
+                <p><i>Keterangan adalah keterangan mengenai order konten. Seperti Tema, Sub Tema, dll yang berkaitan dengan order konten anda</i></p>
               </div>
               <!-- <div class="form-group">
                 <label for="exampleInputPassword1">Total : </label>

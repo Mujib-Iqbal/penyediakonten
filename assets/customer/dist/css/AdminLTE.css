@@ -591,7 +591,7 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
-  width: 280px;
+  /*width: 280px;*/
   padding: 0 0 0 0!important;
   margin: 0!important;
   top: 100%;
@@ -645,7 +645,7 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu > li .menu,
 .navbar-nav > .messages-menu > .dropdown-menu > li .menu,
 .navbar-nav > .tasks-menu > .dropdown-menu > li .menu {
-  max-height: 200px;
+  /*max-height: 200px;*/
   margin: 0;
   padding: 0;
   list-style: none;
@@ -880,7 +880,7 @@ a:focus {
     right: 5%;
     left: auto;
     border: 1px solid #ddd;
-    background: #fff;
+    background: #00a65a;
   }
 }
 /*

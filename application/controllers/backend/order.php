@@ -67,6 +67,7 @@ class Order extends CI_Controller {
         //     $this->session->set_flashdata('success', 'Data Order telah dihapus');
         //     return redirect('dashboard/order/view');
         // }
+        
         $this->session->set_flashdata('success', 'Order beserta data relasinya berhasil dihapus');
         return redirect('dashboard/order/view');
     }

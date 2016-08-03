@@ -42,7 +42,8 @@
               <td><?=$value->konten_keterangan?></td>
               <td><?=$value->konten_file?></td>
               <td>
-                <a href="<?=base_url('uploads/'.$value->konten_file) ?>" class="btn btn-block btn-warning btn-flat"><i class="fa fa-download"></i></a>
+                <a href="<?=base_url('customer/konten/detail/'.$value->konten_id)?>" class="btn btn-info btn-flat"><i class="fa fa-eye"></i></a>
+                <a href="<?=base_url('uploads/'.$value->konten_file) ?>" class="btn btn-warning btn-flat"><i class="fa fa-download"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>

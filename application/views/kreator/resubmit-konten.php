@@ -60,9 +60,8 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>
-        </div><!-- /.box-body -->
-      </div><!-- /.box -->
-    </div>
-  </div>
-</section><!-- /.content -->
-</div><!-- /.content-wrapper
+        </div>
+      </div>
+    </div><!-- /.row -->
+  </section><!-- /.content -->
+</div><!-- /.content-wrapper -->

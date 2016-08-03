@@ -27,14 +27,20 @@
           <li class="<?php if ($this->uri->segment(2)=='order' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('dashboard/order/view'); ?>"><i class="fa fa-server"></i> Lihat Order</a></li>
         </ul>
       </li>
-      <li class="<?php if ($this->uri->segment(2)=='job' || $this->uri->segment(2)=='konten') echo 'active'; ?> treeview">
+      <li class="<?php if ($this->uri->segment(2)=='job') echo 'active'; ?> treeview">
         <a href="#">
           <i class="fa fa-lightbulb-o"></i> <span>Job</span> <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
           <li class="<?php if ($this->uri->segment(2)=='job' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('dashboard/job/view'); ?>"><i class="fa fa-server"></i> Lihat Job</a></li>
-          <!-- <li class="<?php if ($this->uri->segment(2)=='job' AND $this->uri->segment(3)=='add') echo 'active'; ?>"><a href="<?php echo base_url('dashboard/job/add'); ?>"><i class="fa fa-user-plus"></i> Tambah Job</a></li> -->
-          <li class="<?php if ($this->uri->segment(2)=='konten' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('dashboard/konten/view'); ?>"><i class="fa fa-server"></i> Konten</a></li>
+        </ul>
+      </li>
+      <li class="<?php if ($this->uri->segment(2)=='konten') echo 'active'; ?> treeview">
+        <a href="#">
+          <i class="fa fa-gift"></i> <span>Konten</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li class="<?php if ($this->uri->segment(2)=='konten' AND $this->uri->segment(3)=='view') echo 'active'; ?>"><a href="<?php echo base_url('dashboard/konten/view'); ?>"><i class="fa fa-server"></i>Lihat Konten</a></li>
         </ul>
       </li>
       <li class="<?php if ($this->uri->segment(2)=='customer') echo 'active'; ?> treeview">

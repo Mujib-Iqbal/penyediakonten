@@ -22,7 +22,7 @@
         <h3 class="box-title">Daftar Konten</h3>
       </div><!-- /.box-header -->
       <div class="box-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="tabel" class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>Job ID</th>
@@ -36,16 +36,16 @@
           <tbody>
             <?php foreach ($konten as $value) : ?>
             <tr>
-              <td><?=$value->job_id ?></td>
+              <td><a href="<?=base_url('kreator/job/detail/'.$value->job_id) ?>"><?=$value->job_id ?></a></td>
               <td><?=$value->konten_nama ?></td>
               <td><?=$value->konten_keterangan ?></td>
               <td><a href="<?=base_url('uploads/'.$value->konten_file) ?>"><?=$value->konten_file?></a></td>
               <td><?=ucwords($value->konten_status) ?></td>
               <td>
                 <?php if($value->konten_status == 'ditolak'): ?>
-                <a class="btn btn-info btn-flat" href="<?=base_url('kreator/konten/resubmit/'.$value->konten_id) ?>"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-warning btn-flat" href="<?=base_url('kreator/konten/resubmit/'.$value->konten_id) ?>"><i class="fa fa-refresh"></i></a>
                 <?php endif; ?>
-                <a class="btn btn-info btn-flat"  href="<?=base_url('kreator/job/detail/'.$value->job_id) ?>"><i class="fa fa-eye"></i></a>
+                <a class="btn btn-info btn-flat"  href="<?=base_url('kreator/konten/detail/'.$value->konten_id) ?>"><i class="fa fa-eye"></i></a>
                 <a class="btn btn-danger btn-flat" href="<?=base_url('kreator/konten/delete/'.$value->konten_id) ?>"><i class="fa fa-trash"></i></a>
               </td>
             </tr>

@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav">
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">
             <i class="fa fa-user"></i> <b><?php echo $this->session->userdata('admin_username'); ?></b> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">

@@ -11,6 +11,7 @@ class Konten extends CI_Controller {
             redirect('customer/login');
         }
        $this->load->model('konten_model');
+
     }
 
     public function index() {
@@ -24,4 +25,24 @@ class Konten extends CI_Controller {
         return $this->template->customer('konten', $data);
     }
 
+    public function detail($id) {
+         // Cek apakah URL terdapat id customer atau tidak
+        if (is_null($id)) {
+            // Jika tidak ada maka redirect ke halaman pembayaran
+            return redirect('customer/konten/view');
+        }
+
+        // Ambil data customer berdasarkan id tersebut
+        $data['konten'] = $this->konten_model->get($id);
+
+        // Cek apakah terdapat data customer dengan id tersebut
+        if (count($data['konten'])==0) {
+            // Jika tidak ada data customer dengan id tersebut redirect ke halaman customer dengan pesan error
+            $this->session->set_flashdata('danger', 'Data tidak ditemukan');
+            return redirect('customer/konten/view');
+        }
+
+        // Jika ada tampilkan halaman detail pembayaran
+        $this->template->customer('detail-konten', $data);
+    }
 }

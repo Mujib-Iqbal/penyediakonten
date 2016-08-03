@@ -44,6 +44,27 @@ class Konten extends CI_Controller {
     	$this->template->kreator('konten', $data);
     }
 
+    public function detail($id) {
+         // Cek apakah URL terdapat id customer atau tidak
+        if (is_null($id)) {
+            // Jika tidak ada maka redirect ke halaman pembayaran
+            return redirect('kreator/konten/view');
+        }
+
+        // Ambil data customer berdasarkan id tersebut
+        $data['konten'] = $this->konten_model->get($id);
+
+        // Cek apakah terdapat data customer dengan id tersebut
+        if (count($data['konten'])==0) {
+            // Jika tidak ada data customer dengan id tersebut redirect ke halaman customer dengan pesan error
+            $this->session->set_flashdata('danger', 'Data tidak ditemukan');
+            return redirect('kreator/konten/view');
+        }
+
+        // Jika ada tampilkan halaman detail pembayaran
+        $this->template->kreator('detail-konten', $data);
+    }
+
     public function submit() {
     	if (!$this->input->post()) {
     		$data['error'] = '';

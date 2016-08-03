@@ -71,4 +71,11 @@ class Konten_model extends CI_Model {
 
     }
 
+    function detail($id) {
+        $this->db->where('konten_id', $id);
+        $this->db->join('jobs', 'jobs.job_id=konten.job_id');
+        $this->db->join('order', 'jobs.order_id=order.order_id');
+        return $this->db->get('konten')->row();
+    }
+
 }
